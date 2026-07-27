@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Overlapping Images</title>
+
+<style>
+.container{
+    position:relative;
+    width:600px;
+    height:400px;
+}
+
+img{
+    position:absolute;
+    width:200px;
+    height:150px;
+    border:2px solid black;
+}
+
+#img1{
+    top:20px;
+    left:20px;
+    z-index:1;
+}
+
+#img2{
+    top:60px;
+    left:80px;
+    z-index:2;
+}
+
+#img3{
+    top:100px;
+    left:140px;
+    z-index:3;
+}
+</style>
+
+<script>
+function bringFront(id)
+{
+    document.getElementById("img1").style.zIndex=1;
+    document.getElementById("img2").style.zIndex=2;
+    document.getElementById("img3").style.zIndex=3;
+
+    document.getElementById(id).style.zIndex=10;
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <img src="image1.jpg" id="img1" onmouseover="bringFront('img1')">
+    <img src="image2.jpg" id="img2" onmouseover="bringFront('img2')">
+    <img src="image3.jpg" id="img3" onmouseover="bringFront('img3')">
+</div>
+
+</body>
+</html>
