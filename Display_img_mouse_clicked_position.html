@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body onclick="show(event)">
+
+<h2>Click Anywhere</h2>
+
+<img src="myphoto.jpg"
+id="img"
+style="position:absolute;width:80px;display:none;">
+
+<script>
+function show(event){
+let img=document.getElementById("img");
+img.style.left=event.clientX+"px";
+img.style.top=event.clientY+"px";
+img.style.display="block";
+}
+</script>
+
+</body>
+</html>
