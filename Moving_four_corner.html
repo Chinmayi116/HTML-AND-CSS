@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box{
+width:400px;
+margin:auto;
+position:relative;
+text-align:center;
+}
+
+img{
+position:absolute;
+top:0;
+left:0;
+width:100px;
+height:100px;
+opacity:0.3;
+}
+</style>
+
+<script>
+function nw(){
+img.style.top="0px";
+img.style.left="0px";
+}
+function ne(){
+img.style.top="0px";
+img.style.left="300px";
+}
+function sw(){
+img.style.top="180px";
+img.style.left="0px";
+}
+function se(){
+img.style.top="180px";
+img.style.left="300px";
+}
+</script>
+
+</head>
+
+<body>
+
+<button onclick="nw()">Northwest</button>
+<button onclick="ne()">Northeast</button>
+<button onclick="sw()">Southwest</button>
+<button onclick="se()">Southeast</button>
+
+<div id="box">
+<img src="photo.jpg" id="img">
+
+My home is beautiful.<br>
+It is clean and peaceful.<br>
+My family lives happily.<br>
+We enjoy spending time together.<br>
+Our home has a small garden.<br>
+</div>
+
+</body>
+</html>
